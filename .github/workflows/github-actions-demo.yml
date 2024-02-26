@@ -1,4 +1,4 @@
- name: Prueba
+name: Prueba
 
 on: [push]
 
