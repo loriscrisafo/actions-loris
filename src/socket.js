@@ -9,7 +9,7 @@ import router from '@/router'; // Import the router from your project
  * Si estas en preproduccion ferem url = http://pretr2g3.daw.inspedralbes.cat:3590
  */
 const URL = 'http://mathroyale.daw.inspedralbes.cat:3589';
-
+const provaESLINTaa = 'prova';
 export const socket = io(URL, {
   extraHeaders: {
     'Access-Control-Allow-Origin': '*'
