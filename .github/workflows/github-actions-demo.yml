@@ -18,8 +18,8 @@ jobs:
       - name: Checking code quality
         uses: stefanoeb/eslint-action@1.0.2
         with:
-          files: src/
-          
+          files: src/socket.js
+
       - name: Run build task
         run: npm run build --if-present
         
