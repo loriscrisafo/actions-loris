@@ -20,6 +20,6 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/prod_key.pem
           chmod 600 ~/prod_key.pem
           cd ${{ github.workspace }}
-          scp -r -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null -i "~/prod_key.pem" ./dist* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/home/a22lorcrinor/web/a22lorcrinoractions.daw.inspedralbes.cat/public_html
+          scp -r -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null -i "~/prod_key.pem" ./dist/* ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:/home/a22lorcrinor/web/a22lorcrinoractions.daw.inspedralbes.cat/public_html
           
       - run: echo "🍏 This job's status is ${{ job.status }}."
