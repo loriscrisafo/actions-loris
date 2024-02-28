@@ -16,8 +16,8 @@ jobs:
         run: npm install
       
 
-      - name: Checking code quality of socket.js
-        run: npx eslint ./src/socket.js
+      - name: Checking code quality of socket.js and fixing minor errors
+        run: npx eslint ./src/socket.js --fix
       
       - name: Run build task
         run: npm run build --if-present
