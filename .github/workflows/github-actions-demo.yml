@@ -16,9 +16,17 @@ jobs:
         run: npm install
 
       - name: Checking code quality
-        uses: stefanoeb/eslint-action@1.0.2
+        uses: actions/checkout@v3
+        uses: actions/setup-node@v3
         with:
-          files: src/socket.js
+          node-version: 16
+      - run: npm ci # or yarn install
+      - uses: sibiraj-s/action-eslint@v3
+        with:
+          ignore-pattern: |
+            dist/
+            lib/
+            src/assets/
 
       - name: Run build task
         run: npm run build --if-present
